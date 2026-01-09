@@ -1,0 +1,111 @@
+/* Body and general centering */
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #212529;
+    background-image: url("../img/background.png");
+}
+
+form {
+    width: 50vw;            
+    max-width: none;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #495057;
+    border-radius: 10px;
+    box-sizing: border-box;
+    gap: 1rem;
+}
+
+h2.sign-in-label
+{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.input-group {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+}
+
+span.prefix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;             
+    min-width: 40px;
+    color: #dee2e6;
+    background-color: #2b3035;
+    border: 2px solid #343a40;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.info-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.5rem;
+    border: 2px solid #343a40;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: transparent;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: white;
+}
+
+input.info-input:focus {
+    outline: 2px solid cornflowerblue;
+    outline-offset: 2px;
+}
+
+button.submit {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 2px solid #343a40;
+    border-radius: 6px;
+    background-color: #2b3035;
+    color: #dee2e6;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.submit:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    div.input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    span.prefix {
+        width: 100%;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .info-input {
+        border-radius: 0 0 6px 6px;
+    }
+
+    button.submit {
+        max-width: 100%;
+    }
+}
